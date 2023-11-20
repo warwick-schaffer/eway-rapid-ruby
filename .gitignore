@@ -2,6 +2,7 @@
 *.rbc
 /.config
 coverage
+compose.yaml
 /InstalledFiles
 /pkg/
 /spec/reports/

@@ -17,7 +17,7 @@ module EwayRapid
         # @return [String]
         def self.send_request(url, api_key, password, version, request)
           url = url + '/' + request.refund.original_transaction_id.to_s + '/' + Constants::REFUND_SUB_PATH_METHOD
-          url = URI.encode(url)
+          url = Core::URI::Escape.escape(url)
           RefundMsgProcess.new.do_post(url, api_key, password, version, request)
         end
 

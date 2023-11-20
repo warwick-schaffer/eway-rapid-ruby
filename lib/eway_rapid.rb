@@ -78,6 +78,8 @@ require File.join(File.dirname(__FILE__), 'eway_rapid', 'message', 'process', 'r
 require File.join(File.dirname(__FILE__), 'eway_rapid', 'message', 'process', 'customer_process')
 require File.join(File.dirname(__FILE__), 'eway_rapid', 'message', 'process', 'refund_process')
 require File.join(File.dirname(__FILE__), 'eway_rapid', 'message', 'process', 'transaction_process')
+require File.join(File.dirname(__FILE__), 'eway_rapid', 'core', 'uri')
+require File.join(File.dirname(__FILE__), 'eway_rapid', 'core', 'uri', 'escape')
 
 module EwayRapid
 end

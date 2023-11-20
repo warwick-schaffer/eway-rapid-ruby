@@ -1,0 +1,11 @@
+services:
+  app:
+    image: ruby:${RUBY_TAG:-3.0.6}
+    volumes:
+      - .:/app
+      - bundle_path:/usr/local/bundle
+    command: bundle exec rake test
+    working_dir: /app
+
+volumes:
+  bundle_path:

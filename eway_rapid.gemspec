@@ -6,7 +6,7 @@ require 'eway_rapid/version'
 Gem::Specification.new do |spec|
   spec.name          = 'eway_rapid'
   spec.version       = EwayRapid::VERSION
-  spec.required_ruby_version = '>= 2.0.0'
+  spec.required_ruby_version = '>= 2.3.7'
   spec.author        = ['eWAY']
   spec.summary       = 'Ruby gem for eWAY\'s Rapid API'
   spec.description   = 'Easy online payments with eWAY and the eWAY Rapid Ruby gem.'
@@ -16,10 +16,10 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'json', '~> 2.1.0'
+  spec.add_dependency 'json', '~> 2.3'
   spec.add_dependency 'rest-client', '~> 2.0'
 
-  spec.add_development_dependency 'bundler', '~> 1.17'
+  spec.add_development_dependency 'bundler', '~> 2.0'
   spec.add_development_dependency 'rake', '~> 12.0'
   spec.add_development_dependency 'test-unit'
   spec.add_development_dependency 'simplecov'
