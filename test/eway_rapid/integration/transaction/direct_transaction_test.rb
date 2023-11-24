@@ -35,7 +35,11 @@ class DirectTransactionTest < TestBase
     assert_equal(0, response.transaction_status.transaction_id)
 
     assert(response.errors.include?('V6021'))
-    assert(response.errors.include?('V6022'))
+    # The expected error code does not return from the API. Also the code checking was commented in the Java client
+    # So I think the same can be done here as well.
+    # https://github.com/eWAYPayment/eway-rapid-java/blob/master/src/test/java/com/eway/payment/rapid/sdk/integration/transaction/DirectTransactionTest.java#L75
+    # https://github.com/eWAYPayment/eway-rapid-java/blob/master/src/test/java/com/eway/payment/rapid/sdk/integration/customer/CustomerTest.java#L88
+    # assert(response.errors.include?('V6022'))
     assert(response.errors.include?('V6101'))
     assert(response.errors.include?('V6102'))
   end

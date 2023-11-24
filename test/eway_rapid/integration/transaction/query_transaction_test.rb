@@ -33,7 +33,11 @@ class QueryTransactionTest < TestBase
 
   def test_blank_input
     res = @client.query_transaction_by_access_code('')
-    assert_nil(res.transaction)
+    if IntegrationTest.get_version >= 47
+      assert_nil(res.transaction)
+    else
+      assert_nil(res.transaction_status.transaction_id)
+    end
   end
 
   def test_invalid_input
